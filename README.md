@@ -1,6 +1,6 @@
 # Opentact API's Documentation
 
-## installation
+## Installation
 
     make html
     make epub

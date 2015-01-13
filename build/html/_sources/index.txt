@@ -12,8 +12,9 @@ Contents:
    :maxdepth: 1
    
    intro
-   account
-   subaccount
+   accounts
+   subaccounts
+   friends
 
 
 
