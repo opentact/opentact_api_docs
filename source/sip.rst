@@ -18,10 +18,10 @@ curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://lo
 
     {
         "sip_password": "sSGkWsYJVk",
-        "sip_number": "142079451943305",
-        "sid": "54af9a97afd129484fd600b9"
+        "sid": "54af9a97afd129484fd600b9",
+        "is_registered": true,
+        "sip_number": "142079451943305"
     }
+        
     
     
-
-
