@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="unknown"/>
+    <meta name="dtb:depth" content="3"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>Opentact API</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint1" playOrder="1">
+      <navLabel>
+        <text>Welcome to Opentact API&#39;s documentation!</text>
+      </navLabel>
+      <content src="index.html" />
+    </navPoint>
+    <navPoint id="navPoint2" playOrder="2">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="intro.html" />
+      <navPoint id="navPoint3" playOrder="2">
+        <navLabel>
+          <text>Introduction</text>
+        </navLabel>
+        <content src="intro.html" />
+      </navPoint>
+      <navPoint id="navPoint4" playOrder="3">
+        <navLabel>
+          <text>Base URL</text>
+        </navLabel>
+        <content src="intro.html#base-url" />
+      </navPoint>
+      <navPoint id="navPoint5" playOrder="4">
+        <navLabel>
+          <text>HTTP Base Authenication</text>
+        </navLabel>
+        <content src="intro.html#http-base-authenication" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint6" playOrder="5">
+      <navLabel>
+        <text>Accounts</text>
+      </navLabel>
+      <content src="account.html" />
+      <navPoint id="navPoint7" playOrder="5">
+        <navLabel>
+          <text>Accounts</text>
+        </navLabel>
+        <content src="account.html" />
+      </navPoint>
+      <navPoint id="navPoint8" playOrder="6">
+        <navLabel>
+          <text>Account Instance Resource</text>
+        </navLabel>
+        <content src="account.html#account-instance-resource" />
+        <navPoint id="navPoint9" playOrder="6">
+          <navLabel>
+            <text>Account Instance Resource</text>
+          </navLabel>
+          <content src="account.html#account-instance-resource" />
+        </navPoint>
+        <navPoint id="navPoint10" playOrder="7">
+          <navLabel>
+            <text>Resource URI</text>
+          </navLabel>
+          <content src="account.html#resource-uri" />
+        </navPoint>
+        <navPoint id="navPoint11" playOrder="8">
+          <navLabel>
+            <text>Resource Properties</text>
+          </navLabel>
+          <content src="account.html#resource-properties" />
+        </navPoint>
+        <navPoint id="navPoint12" playOrder="9">
+          <navLabel>
+            <text>HTTP GET</text>
+          </navLabel>
+          <content src="account.html#http-get" />
+        </navPoint>
+        <navPoint id="navPoint13" playOrder="10">
+          <navLabel>
+            <text>HTTP POST and PUT</text>
+          </navLabel>
+          <content src="account.html#http-post-and-put" />
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint14" playOrder="11">
+      <navLabel>
+        <text>Sub Accounts</text>
+      </navLabel>
+      <content src="subaccount.html" />
+      <navPoint id="navPoint15" playOrder="11">
+        <navLabel>
+          <text>Sub Accounts</text>
+        </navLabel>
+        <content src="subaccount.html" />
+      </navPoint>
+      <navPoint id="navPoint16" playOrder="12">
+        <navLabel>
+          <text>Billing</text>
+        </navLabel>
+        <content src="subaccount.html#billing" />
+      </navPoint>
+      <navPoint id="navPoint17" playOrder="13">
+        <navLabel>
+          <text>Authentication</text>
+        </navLabel>
+        <content src="subaccount.html#authentication" />
+      </navPoint>
+      <navPoint id="navPoint18" playOrder="14">
+        <navLabel>
+          <text>Creating Sub Accounts</text>
+        </navLabel>
+        <content src="subaccount.html#creating-sub-accounts" />
+        <navPoint id="navPoint19" playOrder="14">
+          <navLabel>
+            <text>Creating Sub Accounts</text>
+          </navLabel>
+          <content src="subaccount.html#creating-sub-accounts" />
+        </navPoint>
+        <navPoint id="navPoint20" playOrder="15">
+          <navLabel>
+            <text>POST Parameters</text>
+          </navLabel>
+          <content src="subaccount.html#post-parameters" />
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint21" playOrder="16">
+        <navLabel>
+          <text>Finding a Sub Account</text>
+        </navLabel>
+        <content src="subaccount.html#finding-a-sub-account" />
+      </navPoint>
+      <navPoint id="navPoint22" playOrder="17">
+        <navLabel>
+          <text>Suspending a Sub Account</text>
+        </navLabel>
+        <content src="subaccount.html#suspending-a-sub-account" />
+      </navPoint>
+      <navPoint id="navPoint23" playOrder="18">
+        <navLabel>
+          <text>Closing a Subaccount</text>
+        </navLabel>
+        <content src="subaccount.html#closing-a-subaccount" />
+      </navPoint>
+      <navPoint id="navPoint24" playOrder="19">
+        <navLabel>
+          <text>Sub Accounts List Resource</text>
+        </navLabel>
+        <content src="subaccount.html#sub-accounts-list-resource" />
+        <navPoint id="navPoint25" playOrder="19">
+          <navLabel>
+            <text>Sub Accounts List Resource</text>
+          </navLabel>
+          <content src="subaccount.html#sub-accounts-list-resource" />
+        </navPoint>
+        <navPoint id="navPoint26" playOrder="20">
+          <navLabel>
+            <text>Resource URI</text>
+          </navLabel>
+          <content src="subaccount.html#resource-uri" />
+        </navPoint>
+        <navPoint id="navPoint27" playOrder="21">
+          <navLabel>
+            <text>HTTP GET</text>
+          </navLabel>
+          <content src="subaccount.html#http-get" />
+        </navPoint>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

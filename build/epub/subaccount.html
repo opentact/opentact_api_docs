@@ -1,32 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sub Accounts &mdash; Opentact API 1.0 documentation</title>
+    <title>Sub Accounts</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Opentact API 1.0 documentation" href="index.html" />
-    <link rel="prev" title="Accounts" href="account.html" /> 
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
   </head>
   <body>
+
     <div class="related">
       <h3>Navigation</h3>
       <ul>
@@ -38,37 +24,36 @@
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
-        <div class="bodywrapper">
           <div class="body">
             
   <div class="section" id="sub-accounts">
-<h1>Sub Accounts<a class="headerlink" href="#sub-accounts" title="Permalink to this headline">¶</a></h1>
+<h1>Sub Accounts</h1>
 <p>Subaccounts in Opentact are just accounts that are &#8220;owned&#8221; by another account. Using a subaccount you can segment each of your customers&#8217; use of Opentact and keep it separate from all the rest, allowing you to easily manage the activity and resources of each customer independently.</p>
 <p>For instance, if you are running a hosted service that relies on Opentact you can create a Opentact subaccount for each customer that signs up. Then if a customer closes his or her account with your service, you can simply deactivate the associated Opentact subaccount.</p>
 <p>Subaccounts allow you to use the Opentact REST API just as you would for a single account; a subaccount can have its own phone numbers and caller IDs, applications, IM and SIP Domains. You can manage a subaccount&#8217;s calls, SMSs, recordings, and transcriptions without affecting other subaccounts.</p>
 <div class="section" id="billing">
-<h2>Billing<a class="headerlink" href="#billing" title="Permalink to this headline">¶</a></h2>
+<h2>Billing</h2>
 <p>Opentact bills all subaccount usage directly to your master account. You&#8217;ll have one Opentact balance for all subaccounts. If your master Opentact account is ever suspended, your subaccounts will also be suspended.</p>
 </div>
 <div class="section" id="authentication">
-<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<h2>Authentication</h2>
 <p>You can use your master Opentact Account credentials (sid and auth_token) to access Opentact&#8217;s REST API for your master account as well as any of your subaccounts. You can not use a subaccount&#8217;s credentials to access the resources of your master Opentact account or any other subaccounts.</p>
 </div>
 <div class="section" id="creating-sub-accounts">
-<h2>Creating Sub Accounts<a class="headerlink" href="#creating-sub-accounts" title="Permalink to this headline">¶</a></h2>
+<h2>Creating Sub Accounts</h2>
 <p>To create a new subaccount, make an HTTP POST request to your Accounts list resource URI:</p>
 <div class="highlight-python"><div class="highlight"><pre>/v1/accounts.json or /v1/accounts.xml
 </pre></div>
 </div>
 <p>If successful, Opentact responds with a representation of the new Account resource.</p>
 <div class="section" id="post-parameters">
-<h3>POST Parameters<a class="headerlink" href="#post-parameters" title="Permalink to this headline">¶</a></h3>
+<h3>POST Parameters</h3>
 <div class="section" id="optional-parameters">
-<h4>Optional Parameters<a class="headerlink" href="#optional-parameters" title="Permalink to this headline">¶</a></h4>
+<h4>Optional Parameters</h4>
 <p>Your request to create a subaccount may include the following parameters:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -89,7 +74,7 @@
 <p>The FriendlyName property is useful for organizing accounts and linking them back to information in your own system. For example, you may want to create subaccounts where the FriendlyName is the primary key of the customer in your application&#8217;s database.</p>
 </div>
 <div class="section" id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4>Example</h4>
 <p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d &#8220;name=userA&#8221;  &#8220;<a class="reference external" href="https://api.opentact.org/v1/accounts.json">https://api.opentact.org/v1/accounts.json</a>&#8221;:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
     <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54b48588afd1295433f9f199&quot;</span><span class="p">,</span>
@@ -106,7 +91,7 @@
 </div>
 </div>
 <div class="section" id="finding-a-sub-account">
-<h2>Finding a Sub Account<a class="headerlink" href="#finding-a-sub-account" title="Permalink to this headline">¶</a></h2>
+<h2>Finding a Sub Account</h2>
 <p>You can query any particular subaccount and its related resources via the REST API by using that its sid in your URLs. For example:</p>
 <p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  &#8220;<a class="reference external" href="https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json">https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json</a>&#8221;:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
@@ -122,7 +107,7 @@
 </div>
 </div>
 <div class="section" id="suspending-a-sub-account">
-<h2>Suspending a Sub Account<a class="headerlink" href="#suspending-a-sub-account" title="Permalink to this headline">¶</a></h2>
+<h2>Suspending a Sub Account</h2>
 <p>You can suspend a subaccount if you don&#8217;t want it to incur any usage charges, however, you will be charged the monthly fee for every Opentact phone number owned by your subaccounts, even when they are suspended. While an account is suspended it cannot make or receive phone calls or send and receive SMS messages. This is useful when your customer does not pay their bill and you want to suspend their account until a successful payment is received.</p>
 <p>Simply POST the parameter &#8216;Status&#8217; with the value &#8216;suspended&#8217; to suspend an account. While suspended, the subaccount will not be able to make or receive phone calls, send or receive IM, send or receive SMS messages, etc.</p>
 <p>To reactivate a suspended subaccount, just POST the value &#8216;active&#8217; for the &#8216;Status&#8217; parameter and we will restore the account to full service.</p>
@@ -130,27 +115,27 @@
 <p>Note that you must use your master account&#8217;s authentication credentials to suspend a subaccount. Also you cannot suspend your master account.</p>
 </div>
 <div class="section" id="closing-a-subaccount">
-<h2>Closing a Subaccount<a class="headerlink" href="#closing-a-subaccount" title="Permalink to this headline">¶</a></h2>
+<h2>Closing a Subaccount</h2>
 <p>If your customer closes his or her account with you, you can permanently close the associated Opentact subaccount by POSTing the parameter &#8216;Status&#8217; with the value &#8216;closed&#8217; to the subaccount resource URI.</p>
 <p>When you close a subaccount, Opentact will release all phone numbers assigned to it and shut it down completely. You can&#8217;t ever use a closed account to make and receive phone calls or send and receive SMS messages. It&#8217;s closed, gone, kaput. It will still appear in your accounts list, and you will still have access to historical data for that subaccount, but you cannot reopen a closed account.</p>
 <p>For details and an example, see the Account instance resource POST section.</p>
 <p>Note that you must use your master account&#8217;s authentication credentials to close a subaccount. Also you cannot close your master account.</p>
 </div>
 <div class="section" id="sub-accounts-list-resource">
-<h2>Sub Accounts List Resource<a class="headerlink" href="#sub-accounts-list-resource" title="Permalink to this headline">¶</a></h2>
+<h2>Sub Accounts List Resource</h2>
 <p>You can use the Accounts list resource to create subaccounts and retrieve the subaccounts that exist under your main account.</p>
 <div class="section" id="resource-uri">
-<h3>Resource URI<a class="headerlink" href="#resource-uri" title="Permalink to this headline">¶</a></h3>
+<h3>Resource URI</h3>
 <p>To create a new subaccount, make an HTTP GET request to your Accounts list resource URI:</p>
 <div class="highlight-python"><div class="highlight"><pre>/v1/accounts.json or /v1/accounts
 </pre></div>
 </div>
 </div>
 <div class="section" id="http-get">
-<h3>HTTP GET<a class="headerlink" href="#http-get" title="Permalink to this headline">¶</a></h3>
+<h3>HTTP GET</h3>
 <p>Retrieve a list of the Sub Account resources belonging to the account.</p>
 <div class="section" id="list-filters">
-<h4>List Filters<a class="headerlink" href="#list-filters" title="Permalink to this headline">¶</a></h4>
+<h4>List Filters</h4>
 <p>The following query string parameters allow you to limit the list returned. Note, parameters are case-sensitive:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -173,7 +158,7 @@
 </table>
 </div>
 <div class="section" id="list-all-accounts">
-<h4>List all accounts:<a class="headerlink" href="#list-all-accounts" title="Permalink to this headline">¶</a></h4>
+<h4>List all accounts:</h4>
 <p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  &#8220;<a class="reference external" href="https://api.opentact.org/v1/accounts.json">https://api.opentact.org/v1/accounts.json</a>&#8221;:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
     <span class="s">&quot;page&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -237,76 +222,10 @@
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Sub Accounts</a><ul>
-<li><a class="reference internal" href="#billing">Billing</a></li>
-<li><a class="reference internal" href="#authentication">Authentication</a></li>
-<li><a class="reference internal" href="#creating-sub-accounts">Creating Sub Accounts</a><ul>
-<li><a class="reference internal" href="#post-parameters">POST Parameters</a><ul>
-<li><a class="reference internal" href="#optional-parameters">Optional Parameters</a></li>
-<li><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#finding-a-sub-account">Finding a Sub Account</a></li>
-<li><a class="reference internal" href="#suspending-a-sub-account">Suspending a Sub Account</a></li>
-<li><a class="reference internal" href="#closing-a-subaccount">Closing a Subaccount</a></li>
-<li><a class="reference internal" href="#sub-accounts-list-resource">Sub Accounts List Resource</a><ul>
-<li><a class="reference internal" href="#resource-uri">Resource URI</a></li>
-<li><a class="reference internal" href="#http-get">HTTP GET</a><ul>
-<li><a class="reference internal" href="#list-filters">List Filters</a></li>
-<li><a class="reference internal" href="#list-all-accounts">List all accounts:</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="account.html"
-                        title="previous chapter">Accounts</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/subaccount.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="account.html" title="Accounts"
-             >previous</a> |</li>
-        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
+
     <div class="footer">
         &copy; Copyright 2015, hewx.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
