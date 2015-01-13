@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SIP</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="friends.html" title="Friends"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="sip">
+<h1>SIP</h1>
+<p>Account&#8217;s sip account</p>
+<div class="section" id="sip-account">
+<h2>SIP Account</h2>
+<p>To get SIP Account, make an HTTP GET request to below URI:</p>
+<div class="highlight-python"><div class="highlight"><pre>/v1/accounts/{sid}/sip.json or  /v1/accounts/{sid}/sip.xml
+</pre></div>
+</div>
+<div class="section" id="example">
+<h3>Example</h3>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  <a class="reference external" href="https://localhost:8000/v1/accounts/54af9a97afd129484fd600b9/sip.json">https://localhost:8000/v1/accounts/54af9a97afd129484fd600b9/sip.json</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;sip_password&quot;</span><span class="p">:</span> <span class="s">&quot;sSGkWsYJVk&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sip_number&quot;</span><span class="p">:</span> <span class="s">&quot;142079451943305&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a97afd129484fd600b9&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2015, hewx.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

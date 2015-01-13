@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Friends</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sip.html" title="SIP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="subaccounts.html" title="Sub Accounts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="friends">
+<h1>Friends</h1>
+<p>Friends in Opentact are relations between subacounts. One subaccount can make a friend with other subaccount. Friends can make calls and send IMs each other.</p>
+<div class="section" id="be-a-friend">
+<h2>Be a friend</h2>
+<p>To be a friend, make an HTTP POST request to below URI:</p>
+<blockquote>
+<div>/v1/friends/sid.json or /v1/friends/sid.xml</div></blockquote>
+<p>If successful, Opentact responds with a successful message.</p>
+<div class="section" id="parameters">
+<h3>Parameters</h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>friend_sid</td>
+<td>which sid you want to be a friend</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="example">
+<h3>Example</h3>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d friend_sid=54af9aa7afd129484fd600bb  <a class="reference external" href="https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json">https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;message&quot;</span><span class="p">:</span> <span class="s">&quot;The friend [54af9aa7afd129484fd600bb] is added to [54af9a97afd129484fd600b9] successfully&quot;</span><span class="p">,</span>
+    <span class="s">&quot;friend_sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9aa7afd129484fd600bb&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a97afd129484fd600b9&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="friends-list-resource">
+<h2>Friends List Resource</h2>
+<p>To get friends, make an HTTP GET request to below URI:</p>
+<blockquote>
+<div>/v1/friends/sid.json or /v1/friends/sid.xml</div></blockquote>
+<div class="section" id="id1">
+<h3>Example</h3>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a <a class="reference external" href="https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json">https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;friends&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&quot;54af9aa7afd129484fd600bb&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2015, hewx.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

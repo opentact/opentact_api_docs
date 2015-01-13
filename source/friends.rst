@@ -29,7 +29,7 @@ Example
 ^^^^^^^^
 
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "friend_sid=54af9aa7afd129484fd600bb"  "https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d friend_sid=54af9aa7afd129484fd600bb  https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json::
 
     {
         "message": "The friend [54af9aa7afd129484fd600bb] is added to [54af9a97afd129484fd600b9] successfully",
@@ -49,7 +49,7 @@ To get friends, make an HTTP GET request to below URI:
 Example
 ^^^^^^^^
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a "https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a https://api.opentact.org/v1/friends/54af9a97afd129484fd600b9.json::
 
 
     {

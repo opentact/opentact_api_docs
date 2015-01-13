@@ -15,6 +15,7 @@ Contents:
    accounts
    subaccounts
    friends
+   sip
 
 
 

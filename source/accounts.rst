@@ -38,7 +38,7 @@ Returns a representation of an account, including the properties above.
 Example
 """"""""
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  "https://api.opentact.org/v1/accounts/54af9a2623d399e38299e143.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://api.opentact.org/v1/accounts/54af9a2623d399e38299e143.json::
     
     
     {
@@ -76,7 +76,7 @@ Example
 
 close a subaccount by POSTing 'status' = 'closed':
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "status=closed"  "https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "status=closed"  https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json::
 
     {
         "owner_sid": "54af9a2623d399e38299e143",

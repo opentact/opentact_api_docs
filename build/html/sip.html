@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to Opentact API’s documentation! &mdash; Opentact API 1.0 documentation</title>
+    <title>SIP &mdash; Opentact API 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Opentact API 1.0 documentation" href="#" />
-    <link rel="next" title="Introduction" href="intro.html" /> 
+    <link rel="top" title="Opentact API 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Friends" href="friends.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,9 +34,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">Opentact API 1.0 documentation</a> &raquo;</li> 
+          <a href="friends.html" title="Friends"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -45,26 +45,27 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-opentact-api-s-documentation">
-<h1>Welcome to Opentact API&#8217;s documentation!<a class="headerlink" href="#welcome-to-opentact-api-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="accounts.html">Accounts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="subaccounts.html">Sub Accounts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="friends.html">Friends</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sip.html">SIP</a></li>
-</ul>
+  <div class="section" id="sip">
+<h1>SIP<a class="headerlink" href="#sip" title="Permalink to this headline">¶</a></h1>
+<p>Account&#8217;s sip account</p>
+<div class="section" id="sip-account">
+<h2>SIP Account<a class="headerlink" href="#sip-account" title="Permalink to this headline">¶</a></h2>
+<p>To get SIP Account, make an HTTP GET request to below URI:</p>
+<div class="highlight-python"><div class="highlight"><pre>/v1/accounts/{sid}/sip.json or  /v1/accounts/{sid}/sip.xml
+</pre></div>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  <a class="reference external" href="https://localhost:8000/v1/accounts/54af9a97afd129484fd600b9/sip.json">https://localhost:8000/v1/accounts/54af9a97afd129484fd600b9/sip.json</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;sip_password&quot;</span><span class="p">:</span> <span class="s">&quot;sSGkWsYJVk&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sip_number&quot;</span><span class="p">:</span> <span class="s">&quot;142079451943305&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a97afd129484fd600b9&quot;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
+</div>
 </div>
 
 
@@ -73,18 +74,23 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to Opentact API&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">SIP</a><ul>
+<li><a class="reference internal" href="#sip-account">SIP Account</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="intro.html"
-                        title="next chapter">Introduction</a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="friends.html"
+                        title="previous chapter">Friends</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
+    <li><a href="_sources/sip.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -111,9 +117,9 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="intro.html" title="Introduction"
-             >next</a> |</li>
-        <li><a href="#">Opentact API 1.0 documentation</a> &raquo;</li> 
+          <a href="friends.html" title="Friends"
+             >previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

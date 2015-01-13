@@ -48,7 +48,7 @@ Example
 """"""""
 
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "name=userA"  "https://api.opentact.org/v1/accounts.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "name=userA"  https://api.opentact.org/v1/accounts.json::
 
     
     {
@@ -67,7 +67,7 @@ Finding a Sub Account
 
 You can query any particular subaccount and its related resources via the REST API by using that its sid in your URLs. For example:    
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  "https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json::
 
     {
         "status": "closed",
@@ -141,7 +141,7 @@ status    Only return Account resources with the given status. Can be **closed**
 List all accounts:
 """""""""""""""""""
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  "https://api.opentact.org/v1/accounts.json"::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://api.opentact.org/v1/accounts.json::
 
 
     {
