@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Accounts &mdash; Opentact API 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opentact API 1.0 documentation" href="index.html" />
+    <link rel="next" title="Sub Accounts" href="subaccount.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="subaccount.html" title="Sub Accounts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="accounts">
+<h1>Accounts<a class="headerlink" href="#accounts" title="Permalink to this headline">¶</a></h1>
+<p>When you first sign up with Opentact, you have just one account, your Master account. But you can also create more accounts... subaccounts are useful for things like segmenting phone numbers and usage data for your customers and controlling access to data. For more information on subaccounts see Using Subaccounts.</p>
+<div class="section" id="account-instance-resource">
+<h2>Account Instance Resource<a class="headerlink" href="#account-instance-resource" title="Permalink to this headline">¶</a></h2>
+<p>An Account instance resource represents a single Opentact account.</p>
+<div class="section" id="resource-uri">
+<h3>Resource URI<a class="headerlink" href="#resource-uri" title="Permalink to this headline">¶</a></h3>
+<p>/v1/accounts/{sid}.json or /v1/accounts/{sid}.xml</p>
+</div>
+<div class="section" id="resource-properties">
+<h3>Resource Properties<a class="headerlink" href="#resource-properties" title="Permalink to this headline">¶</a></h3>
+<p>An Account resource is represented by the following properties:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sid</td>
+<td>A character string that uniquely identifies this account.</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>The type of this account. Either <strong>trial</strong> or <strong>full</strong> if you&#8217;ve upgraded.</td>
+</tr>
+<tr class="row-even"><td>owner_sid</td>
+<td>The Sid of the parent account for this account. The owner_sid of a parent account is its own sid.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>The status of this account. Usually active, but can be <strong>suspended</strong> or <strong>closed</strong>.</td>
+</tr>
+<tr class="row-even"><td>name</td>
+<td>A human readable description of this account, up to 64 characters long. By default the name is your email address.</td>
+</tr>
+<tr class="row-odd"><td>date_created</td>
+<td>The date that this account was created, in GMT in RFC 2822 format</td>
+</tr>
+<tr class="row-even"><td>date_updated</td>
+<td>The date that this account was last updated, in GMT in RFC 2822 format.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="http-get">
+<h3>HTTP GET<a class="headerlink" href="#http-get" title="Permalink to this headline">¶</a></h3>
+<p>Returns a representation of an account, including the properties above.</p>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  &#8220;<a class="reference external" href="https://api.opentact.org/v1/accounts/54af9a2623d399e38299e143.json">https://api.opentact.org/v1/accounts/54af9a2623d399e38299e143.json</a>&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;owner_sid&quot;</span><span class="p">:</span> <span class="s">&quot;None&quot;</span><span class="p">,</span>
+    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Peter Dao&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a2623d399e38299e143&quot;</span><span class="p">,</span>
+    <span class="s">&quot;date_created&quot;</span><span class="p">:</span> <span class="s">&quot;2014-01-01 00:00:00&quot;</span><span class="p">,</span>
+    <span class="s">&quot;date_updated&quot;</span><span class="p">:</span> <span class="s">&quot;2014-01-01 00:00:00&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;active&quot;</span><span class="p">,</span>
+    <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;full&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="http-post-and-put">
+<h3>HTTP POST and PUT<a class="headerlink" href="#http-post-and-put" title="Permalink to this headline">¶</a></h3>
+<p>Allows you to modify the properties of an account.</p>
+<p>See the Subaccounts reference for more information on suspending, unsuspending or closing subaccounts using the &#8216;Status&#8217; parameter.</p>
+<div class="section" id="optional-parameters">
+<h4>Optional Parameters<a class="headerlink" href="#optional-parameters" title="Permalink to this headline">¶</a></h4>
+<p>You may POST the following parameters:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="95%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>A human readable description of this account, up to 64 characters long. By default the name is your email address.</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>Alter the status of this account: use closed to irreversibly close this account, suspended to temporarily <strong>suspend</strong> it, or <strong>active</strong> to reactivate it.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h4>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>close a subaccount by POSTing &#8216;status&#8217; = &#8216;closed&#8217;:</p>
+<p>curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d &#8220;status=closed&#8221;  &#8220;<a class="reference external" href="https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json">https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9.json</a>&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;owner_sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a2623d399e38299e143&quot;</span><span class="p">,</span>
+    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;userA&quot;</span><span class="p">,</span>
+    <span class="s">&quot;sid&quot;</span><span class="p">:</span> <span class="s">&quot;54af9a97afd129484fd600b9&quot;</span><span class="p">,</span>
+    <span class="s">&quot;date_created&quot;</span><span class="p">:</span> <span class="s">&quot;2015-01-09 17:08:39&quot;</span><span class="p">,</span>
+    <span class="s">&quot;date_updated&quot;</span><span class="p">:</span> <span class="s">&quot;2015-01-12 19:15:27&quot;</span><span class="p">,</span>
+    <span class="s">&quot;status&quot;</span><span class="p">:</span> <span class="s">&quot;closed&quot;</span><span class="p">,</span>
+    <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;full&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Accounts</a><ul>
+<li><a class="reference internal" href="#account-instance-resource">Account Instance Resource</a><ul>
+<li><a class="reference internal" href="#resource-uri">Resource URI</a></li>
+<li><a class="reference internal" href="#resource-properties">Resource Properties</a></li>
+<li><a class="reference internal" href="#http-get">HTTP GET</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#http-post-and-put">HTTP POST and PUT</a><ul>
+<li><a class="reference internal" href="#optional-parameters">Optional Parameters</a></li>
+<li><a class="reference internal" href="#id1">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="subaccount.html"
+                        title="next chapter">Sub Accounts</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/account.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="subaccount.html" title="Sub Accounts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li><a href="index.html">Opentact API 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, hewx.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

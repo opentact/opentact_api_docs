@@ -1,0 +1,64 @@
+Sub Accounts
+============
+
+Subaccounts in Opentact are just accounts that are "owned" by another account. Using a subaccount you can segment each of your customers' use of Opentact and keep it separate from all the rest, allowing you to easily manage the activity and resources of each customer independently.
+
+For instance, if you are running a hosted service that relies on Opentact you can create a Opentact subaccount for each customer that signs up. Then if a customer closes his or her account with your service, you can simply deactivate the associated Opentact subaccount.
+
+Subaccounts allow you to use the Opentact REST API just as you would for a single account; a subaccount can have its own phone numbers and caller IDs, applications, IM and SIP Domains. You can manage a subaccount's calls, SMSs, recordings, and transcriptions without affecting other subaccounts.
+
+Billing
+----------
+
+Opentact bills all subaccount usage directly to your master account. You'll have one Twilio balance for all subaccounts. If your master Opentact account is ever suspended, your subaccounts will also be suspended.
+
+Authentication
+-----------------------
+
+You can use your master Opentact Account credentials (sid and auth_token) to access Opentact's REST API for your master account as well as any of your subaccounts. You can not use a subaccount's credentials to access the resources of your master Opentact account or any other subaccounts.
+
+Creating Sub Accounts
+------------------------------------
+
+To create a new subaccount, make an HTTP POST request to your Accounts list resource URI:
+
+    /v1/accounts
+    
+If successful, Opentact responds with a representation of the new Account resource.
+
+
+POST Parameters
+^^^^^^^^^^^^^^^^
+
+Optional Parameters
+""""""""""""""""""""""""
+
+Your request to create a subaccount may include the following parameters:
+
+============ ===========
+Parameter    Description
+============ ===========
+FriendlyName A human readable description of the new subaccount, up to 64 characters. 
+============ ===========
+
+
+The FriendlyName property is useful for organizing accounts and linking them back to information in your own system. For example, you may want to create subaccounts where the FriendlyName is the primary key of the customer in your application's database.
+
+Example
+""""""""
+
+
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a -d "name=userA"  "https://localhost:8000/v1/accounts.json"::
+
+    
+    {
+        "sid": "54b48588afd1295433f9f199",
+        "type": "full",
+        "name": "userA",
+        "date_updated": "2015-01-13 10:40:08",
+        "status": "active",
+        "date_created": "2015-01-13 10:40:08",
+        "owner_sid": "54af9a2623d399e38299e143"
+    }
+    
+    
