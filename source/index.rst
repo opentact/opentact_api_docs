@@ -16,6 +16,10 @@ Contents:
    subaccounts
    friends
    sip
+   im
+   sms
+   payments
+   
 
 
 
