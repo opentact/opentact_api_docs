@@ -133,8 +133,8 @@ The following query string parameters allow you to limit the list returned. Note
 ========= ===========
 Parameter Description
 ========= ===========
-name      Only return the Account resources with friendly names that exactly match this name.
-status    Only return Account resources with the given status. Can be **closed**, **suspended** or **active**.
+page      Current page.
+pagesize  How many items in a page.
 ========= ===========
 
 

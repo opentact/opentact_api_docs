@@ -6,7 +6,7 @@ Account's IM account
 IM Account Status
 ------------------
 
-To get SIP Account, make an HTTP GET request to below URI::
+To get IM Account Status, make an HTTP GET request to below URI::
 
     /v1/accounts/{sid}/im.json or  /v1/accounts/{sid}/im.xml
 
@@ -14,7 +14,7 @@ To get SIP Account, make an HTTP GET request to below URI::
 Example
 ^^^^^^^^^
 
-curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://localhost:8000/v1/accounts/54af9a97afd129484fd600b9/im.json::
+curl -k -u 54af9a2623d399e38299e143:76612d48070140ccb819dd9099f6672a  https://api.opentact.org/v1/accounts/54af9a97afd129484fd600b9/im.json::
 
     {
         "sid": "54af9a97afd129484fd600b9",

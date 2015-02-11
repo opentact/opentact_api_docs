@@ -67,8 +67,8 @@ You may POST the following parameters:
 ======== ===========
 Property Description
 ======== ===========
-name	 A human readable description of this account, up to 64 characters long. By default the name is your email address.
-status   Alter the status of this account: use closed to irreversibly close this account, suspended to temporarily **suspend** it, or **active** to reactivate it.
+page	 A human readable description of this account, up to 64 characters long. By default the name is your email address.
+page_size   Alter the status of this account: use closed to irreversibly close this account, suspended to temporarily **suspend** it, or **active** to reactivate it.
 ======== ===========
 
 Example
